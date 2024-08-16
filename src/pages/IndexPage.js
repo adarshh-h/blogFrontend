@@ -34,7 +34,7 @@ export default function IndexPage() {
   useEffect(() => {
     const fetchPosts = async () => {
       try {
-        const response = await fetch('http://localhost:8000/post');
+        const response = await fetch('https://blogapp-backend-ifdq.onrender.com/post');
         if (!response.ok) {
           throw new Error('Failed to fetch posts');
         }

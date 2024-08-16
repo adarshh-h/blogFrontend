@@ -67,7 +67,7 @@ export default function Header() {
   const { setUserInfo, userInfo } = useContext(UserContext);
 
   useEffect(() => {
-    fetch("http://localhost:8000/profile", {
+    fetch("https://blogapp-backend-ifdq.onrender.com/profile", {
       credentials: 'include',
     }).then(response => {
       response.json().then(userInfo => {
@@ -77,7 +77,7 @@ export default function Header() {
   }, [setUserInfo]); // Add setUserInfo to dependency array
 
   function logout() {
-    fetch('http://localhost:8000/logout', {
+    fetch('https://blogapp-backend-ifdq.onrender.com/logout', {
       credentials: 'include',
       method: "POST",
     }).then(() => {

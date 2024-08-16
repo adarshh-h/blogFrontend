@@ -65,7 +65,7 @@ export default function PostPage() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    fetch(`http://localhost:8000/post/${id}`)
+    fetch(`https://blogapp-backend-ifdq.onrender.com/post/${id}`)
       .then((response) => response.json())
       .then((postInfo) => {
         setPostInfo(postInfo);
@@ -75,7 +75,7 @@ export default function PostPage() {
   const handleDelete = async () => {
     if (window.confirm("Are you sure you want to delete this post?")) {
       try {
-        const response = await fetch(`http://localhost:8000/post/${id}`, {
+        const response = await fetch(`https://blogapp-backend-ifdq.onrender.com/post/${id}`, {
           method: "DELETE",
           credentials: "include", // Include cookies for authentication
         });
@@ -125,7 +125,7 @@ export default function PostPage() {
         </div>
       )}
       <div className="image">
-        <img src={`http://localhost:8000/${postInfo.cover}`} alt="" />
+        <img src={`https://blogapp-backend-ifdq.onrender.com/${postInfo.cover}`} alt="" />
       </div>
 
       <div
